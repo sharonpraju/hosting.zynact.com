@@ -127,7 +127,7 @@
                            <i class="tim-icons icon-email-85"></i>
                          </div>
                        </div>
-                       <input type="text" class="form-control" name="email" placeholder="Email" required autocomplete="off"><br><br>
+                       <input type="text" class="form-control" name="email" placeholder="Email" required autocomplete="off">
                   </div>
                   <input type="submit" target="_blank" class="btn-green text-white" value="Reset Password">
                   </form>
