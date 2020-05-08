@@ -98,7 +98,7 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
             //$number = $_REQUEST['number'];
             $message="We have recieved a request for reseting password for your Zynact Hosting account<br>
             please click on the link below to reset the password<br><br>
-            https://hosting.zynact.com/password_form.php?email=".$to."token=".$token;
+            https://hosting.zynact.com/password_form.php?email=".$to."&token=".$token;
             $footer="Thank you,<br>Zynact Hosting Team";
             $headers = "From: $from";
         	$headers = "From: " . $from . "\r\n";
@@ -126,8 +126,9 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
                     echo"<br><br><br><br><br><br><br><center>
                     <div class='text-white'>We have sent an email to ".$to."
                     <br>Please click on the link in that email to reset your password.
+                    <br>Check the spam folder also for the mail!
                     <br><br>
-                    <a class='btn btn-info' href='index.php'>Home</a></div></center>";
+                    <a class='btn btn-info' href='login.php'>Back</a></div></center>";
                 }
                 else
                 {
@@ -137,7 +138,7 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
                     <br>Please try again, If this happens again please contact us.
                     <br> Error-Code : pass_chng01";
                     echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
-                    <a class='btn btn-info' href='index.php'>Home</a></div></center>";
+                    <a class='btn btn-info' href='login.php'>Login</a></div></center>";
                 }
     }
 
@@ -169,7 +170,7 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
             //$number = $_REQUEST['number'];
             $message="We have recieved a request for reseting password for your Zynact Hosting account<br>
             please click on the link below to reset the password<br><br>
-            https://hosting.zynact.com/password_form.php?email=".$to."token=".$token;
+            https://hosting.zynact.com/password_form.php?email=".$to."&token=".$token;
             $footer="Thank you,<br>Zynact Hosting Team";
             $headers = "From: $from";
         	$headers = "From: " . $from . "\r\n";
@@ -197,8 +198,9 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
                     echo"<br><br><br><br><br><br><br><center>
                     <div class='text-white'>We have sent an email to ".$to."
                     <br>Please click on the link in that email to reset your password.
+                    <br>Check the spam folder also for the mail!
                     <br><br>
-                    <a class='btn btn-info' href='index.php'>Home</a></div></center>";
+                    <a class='btn btn-info' href='login.php'>Back</a></div></center>";
                 }
                 else
                 {
