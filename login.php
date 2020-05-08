@@ -121,7 +121,14 @@
                 <div class="text-center">
                   <form action="validate.php" method="post">
                   <input type="text" name="validate" value="forgot_password" hidden readonly>
-                  <input type="text" name="email" placeholder="Email" required readonly><br><br>
+                  <div class="input-group">
+                       <div class="input-group-prepend">
+                         <div class="input-group-text">
+                           <i class="tim-icons icon-email-85"></i>
+                         </div>
+                       </div>
+                       <input type="text" class="form-control" name="email" placeholder="Email" required autocomplete="off"><br><br>
+                  </div>
                   <input type="submit" target="_blank" class="btn-green text-white" value="Reset Password">
                   </form>
                   <br><br>
@@ -166,7 +173,7 @@
                     <input type="text" name="reff" value="<?php echo $reff;?>" hidden readonly>
                     <input type="text" name="validate" value="login" hidden readonly>
                     <input type="submit" value="Login" class="btn btn-info btn-round btn-lg"> 
-                    <a class="btn btn-link btn-success" data-toggle="modal" data-target="#myModal1">&nbsp; Forgot Password</a>
+                    <a class="btn btn-link btn-success" style="color: #00f2c3;" data-toggle="modal" data-target="#myModal1">&nbsp; Forgot Password</a>
                    </form>
                  </div>
                </div>

@@ -1,5 +1,5 @@
 <?php
-if(!empty($_POST['email']) && !empty($_POST['token']))
+if(!empty($_GET['email']) && !empty($_GET['token']))
 {
     //do nothing
 }

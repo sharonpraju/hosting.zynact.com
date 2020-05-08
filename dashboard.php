@@ -290,7 +290,7 @@
                   <div class="" id="example-navbar-primary">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" data-toggle="modal" data-target="#myModal4">
+                      <a class="btn btn-link" data-toggle="modal" data-target="#myModal4">
                         <i class="tim-icons icon-single-02"></i>Profile</a>
                     </li>
                   </ul>
