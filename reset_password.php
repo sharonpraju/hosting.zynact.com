@@ -41,7 +41,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['token']) &
     $pass_token=$row['pass_token'];
     if($pass_tokenx==$pass_token && $pass_token!=0)
     {
-        if($pass_token!=0)
+        if($pass_token!='0')
         {
             $sql="UPDATE user_config
             SET password='$password', pass_token='0' WHERE email='$email'";
