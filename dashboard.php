@@ -5,6 +5,14 @@
  if(isset($_SESSION['user']))
   {
     $user=$_SESSION['user'];
+    if($_SESSION['pro_status']==1)
+    {
+      $profile_status="Pro";
+    }
+    else
+    {
+      $profile_status="Free";
+    }
   }
   else
   {
@@ -242,6 +250,35 @@
           </div>
         </div>
       </div>
+      <div class="modal fade modal-black" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none; margin-top:-10px;" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header justify-content-center">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="tim-icons icon-simple-remove text-white"></i>
+              </button>
+              <div class="text-muted text-center ml-auto mr-auto">
+                <h3 class="mb-0">Profile</h3>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="text-center text-muted mb-4 mt-3">
+                <small></small>
+              </div>
+                <small><p><b>Name : <input type="text" class="btn-link" style="width:70%;" value="<?php echo $_SESSION['user_name']; ?>" readonly></b></p></small><br>
+                <small><p><b>Email : <input type="text" class="btn-link" style="width:70%;" value="<?php echo $_SESSION['user']; ?>" readonly></b></p></small><br>
+                <small><p><b>Plan : <input type="text" class="btn-link" style="width:70%;"  value="<?php echo $profile_status; ?>" readonly></b></p></small><br>
+                <div class="text-center">
+                  <form action="validate.php" method="post">
+                  <input type="text" name="validate" value="change_password" hidden readonly>
+                  <input type="submit" target="_blank" class="btn-green text-white" value="Change Password">
+                  </form>
+                  <br><br>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
      <br><br><br>
      <center>
       <div class="col-md-6 div_acc_1">
@@ -250,6 +287,14 @@
               <nav class="navbar navbar-expand-lg bg-info">
                 <div class="container">
                   <p class="navbar-brand" >Dashboard</p>
+                  <div class="" id="example-navbar-primary">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="modal" data-target="#myModal4">
+                        <i class="tim-icons icon-single-02"></i>Profile</a>
+                    </li>
+                  </ul>
+                </div>
                 </div>
               </nav>
       </div>

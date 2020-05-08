@@ -102,6 +102,34 @@
     </div>
   </nav>
    <!-- End Navbar -->
+   <div class="modal fade modal-black" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none; margin-top:-10px;" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header justify-content-center">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <i class="tim-icons icon-simple-remove text-white"></i>
+              </button>
+              <div class="text-muted text-center ml-auto mr-auto">
+                <h3 class="mb-0">Forgot Password</h3>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="text-center text-muted mb-4 mt-3">
+                <small></small>
+              </div>
+              <br><br>
+                <div class="text-center">
+                  <form action="validate.php" method="post">
+                  <input type="text" name="validate" value="forgot_password" hidden readonly>
+                  <input type="text" name="email" placeholder="Email" required readonly><br><br>
+                  <input type="submit" target="_blank" class="btn-green text-white" value="Reset Password">
+                  </form>
+                  <br><br>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
    <div class="wrapper">
      <div class="page-header">
        <div class="page-header-image"></div>
@@ -138,6 +166,7 @@
                     <input type="text" name="reff" value="<?php echo $reff;?>" hidden readonly>
                     <input type="text" name="validate" value="login" hidden readonly>
                     <input type="submit" value="Login" class="btn btn-info btn-round btn-lg"> 
+                    <a class="btn btn-link btn-success" data-toggle="modal" data-target="#myModal1">&nbsp; Forgot Password</a>
                    </form>
                  </div>
                </div>

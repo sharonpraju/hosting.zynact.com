@@ -55,7 +55,7 @@ if(isset($_SESSION['user']))
                 <br>Please try again, If this happens again please contact us.
                 <br> Error-Code : acc_val01";
                 echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
-                <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                <a class='btn btn-info' href='index.php'>Home</a></div></center>";
                 }
             }
         }
