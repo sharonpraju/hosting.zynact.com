@@ -97,7 +97,7 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
             $subject = "Password Reset";
             //$number = $_REQUEST['number'];
             $message="We have recieved a request for reseting password for your Zynact Hosting account<br>
-            please click on the link below to reset the password<br><br>
+            please click on the link below (or copy and paste the link in your browser) to reset the password<br><br>
             https://hosting.zynact.com/password_form.php?email=".$to."&token=".$token;
             $footer="Thank you,<br>Zynact Hosting Team";
             $headers = "From: $from";
@@ -169,7 +169,7 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
             $subject = "Password Reset";
             //$number = $_REQUEST['number'];
             $message="We have recieved a request for reseting password for your Zynact Hosting account<br>
-            please click on the link below to reset the password<br><br>
+            please click on the link below (or copy and paste the link in your browser) to reset the password<br><br>
             https://hosting.zynact.com/password_form.php?email=".$to."&token=".$token;
             $footer="Thank you,<br>Zynact Hosting Team";
             $headers = "From: $from";
