@@ -126,7 +126,7 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
                     echo"<br><br><br><br><br><br><br><center>
                     <div class='text-white'>We have sent an email to ".$to."
                     <br>Please click on the link in that email to reset your password.
-                    <br>Check the spam folder also for the mail!
+                    <br>Check the spam folder also for the email.
                     <br><br>
                     <a class='btn btn-info' href='login.php'>Back</a></div></center>";
                 }
@@ -198,7 +198,7 @@ if(isset($_POST['validate']) && !empty($_POST['validate']))
                     echo"<br><br><br><br><br><br><br><center>
                     <div class='text-white'>We have sent an email to ".$to."
                     <br>Please click on the link in that email to reset your password.
-                    <br>Check the spam folder also for the mail!
+                    <br>Check the spam folder also for the email.
                     <br><br>
                     <a class='btn btn-info' href='login.php'>Back</a></div></center>";
                 }

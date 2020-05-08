@@ -55,7 +55,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['token']) &
         }
         else
         {
-            //echo $conn->error;
+            echo $conn->error;
             echo"<br><br><br><br><br><br><br><center>
             <div class='text-white'>Something Went Wrong
             <br>Please try again, If this happens again please contact us.
@@ -69,7 +69,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['token']) &
         echo"<br><br><br><br><br><br><br><center>
         <div class='text-white'>Something Went Wrong
         <br>Please try again, If this happens again please contact us.
-        <br> Error-Code : pass_chng01";
+        <br> Error-Code : pass_chng02";
         echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
         <a class='btn btn-info' href='index.php'>Home</a></div></center>";
     }
