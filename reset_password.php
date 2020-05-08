@@ -39,39 +39,51 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['token']) &
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $pass_token=$row['pass_token'];
-    if($pass_tokenx==$pass_token)
+    if($pass_tokenx==$pass_token && $pass_token!=0)
     {
-        $sql="UPDATE user_config
-        SET password='$password', pass_token='0' WHERE email='$email'";
-        if ($conn->query($sql) === TRUE)
+        if($pass_token!=0)
         {
-            session_start() ;
-            session_unset();
-            session_destroy();
-            echo"<br><br><br><br><br><br><br><center>
-            <div class='text-white'>Password Successfully Changed
-            <br><br>
-            <a class='btn btn-info' href='login.php'>Login</a></div></center>";
+            $sql="UPDATE user_config
+            SET password='$password', pass_token='0' WHERE email='$email'";
+            if ($conn->query($sql) === TRUE)
+            {
+                session_start() ;
+                session_unset();
+                session_destroy();
+                echo"<br><br><br><br><br><br><br><center>
+                <div class='text-white'>Password Successfully Changed
+                <br><br>
+                <a class='btn btn-info' href='login.php'>Login</a></div></center>";
+            }
+            else
+            {
+                //echo $conn->error;
+                echo"<br><br><br><br><br><br><br><center>
+                <div class='text-white'>Something Went Wrong
+                <br>Please try again, If this happens again please contact us.
+                <br> Error-Code : pass_chng01";
+                echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
+                <a class='btn btn-info' href='index.php'>Home</a></div></center>";
+            }
         }
         else
         {
-            echo $conn->error;
             echo"<br><br><br><br><br><br><br><center>
             <div class='text-white'>Something Went Wrong
             <br>Please try again, If this happens again please contact us.
-            <br> Error-Code : pass_chng01";
+            <br> Error-Code : pass_chng02";
             echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
             <a class='btn btn-info' href='index.php'>Home</a></div></center>";
         }
     }
     else
     {
-        echo $pass_token;
-        echo $pass_tokenx;
+        //echo $pass_token;
+        //echo $pass_tokenx;
         echo"<br><br><br><br><br><br><br><center>
         <div class='text-white'>Something Went Wrong
         <br>Please try again, If this happens again please contact us.
-        <br> Error-Code : pass_chng02";
+        <br> Error-Code : pass_chng03";
         echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
         <a class='btn btn-info' href='index.php'>Home</a></div></center>";
     }
