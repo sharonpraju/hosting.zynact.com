@@ -258,7 +258,7 @@
    </div>
    <script>
      $(document).ready(function(){
-      $("#textbox").keypress(function (e) {
+      $("#username").keypress(function (e) {
         var key = e.keyCode || e.which;       
         $("#error_msg").html("");
         //Regular Expression
@@ -266,7 +266,7 @@
         //Validate Text Field value against the Regex.
         var is_valid = reg_exp.test(String.fromCharCode(key));
         if (!is_valid) {
-          $("#error_msg").html("No special characters Please!");
+          $("#error_msg").html("No special characters allowed!");
         }
         return is_valid;
       });
