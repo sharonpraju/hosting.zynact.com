@@ -144,7 +144,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                 }
                 else
                 {
-                    //echo $conn->error;
+                    echo $conn->error;
                     echo"<br><br><br><br><br><br><br><center>
                     <div class='text-white'>Something Went Wrong
                     <br>Please try again, If this happens again please contact us.
