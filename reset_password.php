@@ -47,13 +47,30 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['token']) &
             SET password='$password', pass_token='0' WHERE email='$email'";
             if ($conn->query($sql) === TRUE)
             {
-                session_start() ;
                 session_unset();
                 session_destroy();
                 echo"<br><br><br><br><br><br><br><center>
-                <div class='text-white'>Password Successfully Changed
-                <br><br>
-                <a class='btn btn-info' href='login.php'>Login</a></div></center>";
+                <div class='text-white'>Hosting Account Password Successfully Changed
+                <br><br>";
+                $sql="UPDATE forum_users
+                SET password='$password' WHERE email='$email'";
+                if ($conn->query($sql) === TRUE)
+                {
+                    echo"<br><br><br><br><br><br><br><center>
+                    <div class='text-white'>Community Forum Password Successfully Changed
+                    <br><br>
+                    <a class='btn btn-info' href='login.php'>Login</a></div></center>";
+                }
+                else
+                {
+                    //echo $conn->error;
+                    echo"<br><br><br><br><br><br><br><center>
+                    <div class='text-white'>Something Went Wrong
+                    <br>Please try again, If this happens again please contact us.
+                    <br> Error-Code : pass_chng_forum_01";
+                    echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
+                    <a class='btn btn-info' href='index.php'>Home</a></div></center>";
+                }
             }
             else
             {
@@ -61,7 +78,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['token']) &
                 echo"<br><br><br><br><br><br><br><center>
                 <div class='text-white'>Something Went Wrong
                 <br>Please try again, If this happens again please contact us.
-                <br> Error-Code : pass_chng01";
+                <br> Error-Code : pass_chng_01";
                 echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
                 <a class='btn btn-info' href='index.php'>Home</a></div></center>";
             }

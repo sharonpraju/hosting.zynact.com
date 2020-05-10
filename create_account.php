@@ -38,6 +38,13 @@ function getUserIP()
     return $ip;
 }
 
+function clean($string) {
+    $string = str_replace(' ', '', $string); // Removes all spaces.
+    $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+ 
+    return preg_replace('/-+/', '', $string); // Removes multiple hyphens.
+}
+
 $user_ip = getUserIP();
 
 if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password']) && !empty($_POST['password']) && isset($_SESSION['plan_selected']) && !empty($_SESSION['plan_selected']))
@@ -75,7 +82,24 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                     $_SESSION['user']=$email;
                     $_SESSION['pass']=$passwordx;
                     $_SESSION['pro_status']=$plan_id;
+                    $name=clean($name);
+                    $date_time=date("Y-m-d h:i:s");
+                    $sql="INSERT INTO forum_users (username, email, is_email_confirmed, password, joined_at)
+                    VALUES ('$name', '$email', '1', '$password', '$date_time')";
+                    if ($conn->query($sql) === TRUE)
+                    {
                     header("Location: dashboard.php");
+                    }
+                    else
+                    {
+                        //echo $conn->error;
+                        echo"<br><br><br><br><br><br><br><center>
+                        <div class='text-white'>Something Went Wrong
+                        <br>Please try again, If this happens again please contact us.
+                        <br> Error-Code : acc_reg_forum_01";
+                        echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
+                        <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                    }
                 }
                 else
                 {
@@ -110,7 +134,24 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
             {
                 $_SESSION['user']=$email;
                 $_SESSION['pass']=$passwordx;
+                $name=clean($name);
+                $date_time=date("Y-m-d h:i:s");
+                $sql="INSERT INTO forum_users (username, email, is_email_confirmed, password, joined_at)
+                VALUES ('$name', '$email', '1', '$password', '$date_time')";
+                if ($conn->query($sql) === TRUE)
+                {
                 header("Location: dashboard.php");
+                }
+                else
+                {
+                    //echo $conn->error;
+                    echo"<br><br><br><br><br><br><br><center>
+                    <div class='text-white'>Something Went Wrong
+                    <br>Please try again, If this happens again please contact us.
+                    <br> Error-Code : acc_reg_forum_02";
+                    echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
+                    <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                }
             }
             else
             {
