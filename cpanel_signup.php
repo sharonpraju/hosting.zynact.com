@@ -132,7 +132,7 @@
               <h4 class="card-title"></h4>
                 <div class="card-body">
                   <form class="form" action="http://zynact.top/cpanel_create.php" method="post" target="_blank">
-                  &nbsp;Account Label &nbsp; <div id="error_msg"></div><br>
+                  &nbsp;Account Label &nbsp; &nbsp;<div id="error_msg" style="color:orange"></div><br>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
