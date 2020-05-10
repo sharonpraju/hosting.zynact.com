@@ -271,6 +271,7 @@
       })
    </script>
    <!--   Core JS Files   -->
+   <script src="http://code.jquery.com/jquery-1.7.2.min.js " type="text/javascript"></script>
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/jquery.min.js" type="text/javascript"></script>
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/popper.min.js" type="text/javascript"></script>
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/bootstrap.min.js" type="text/javascript"></script>
