@@ -131,7 +131,7 @@
               <h4 class="card-title"></h4>
                 <div class="card-body">
                   <form class="form" action="http://zynact.top/cpanel_create.php" method="post" target="_blank">
-                  &nbsp;Account Label<br>
+                  &nbsp;Account Label &nbsp; <div id="error_msg"></div><br>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
@@ -256,22 +256,22 @@
       </footer>
    </div>
    <script>
-     $("#username").keypress(function(e) {
-      	$("#error_sp_msg").remove();
-      	var k = e.keyCode,
-      			$return = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32  || (k >= 48 && k <= 57));
-            if(!$return) {
-            	$("<span/>",{
-              	"id" : "error_sp_msg",
-                "html" 	: " &nbsp; Special characters not allowed"
-              }).insertAfter($(this));
-            	return false;
-            }
-
-      })
+     $(document).ready(function(){
+      $("#textbox").keypress(function (e) {
+        var key = e.keyCode || e.which;       
+        $("#error_msg").html("");
+        //Regular Expression
+        var reg_exp = /^[A-Za-z0-9 ]+$/;
+        //Validate Text Field value against the Regex.
+        var is_valid = reg_exp.test(String.fromCharCode(key));
+        if (!is_valid) {
+          $("#error_msg").html("No special characters Please!");
+        }
+        return is_valid;
+      });
+    });
    </script>
    <!--   Core JS Files   -->
-   <script src="http://code.jquery.com/jquery-1.7.2.min.js " type="text/javascript"></script>
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/jquery.min.js" type="text/javascript"></script>
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/popper.min.js" type="text/javascript"></script>
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/bootstrap.min.js" type="text/javascript"></script>
