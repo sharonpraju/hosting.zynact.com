@@ -138,7 +138,7 @@
                           <i class="tim-icons icon-single-02"></i>
                         </div>
                       </div>
-                      <input type="text" class="form-control" name="username" placeholder="&nbsp; Eg &nbsp;:&nbsp; mywebsite" required autocomplete="off">
+                      <input type="text" class="form-control" id="username" name="username" placeholder="&nbsp; Eg &nbsp;:&nbsp; mywebsite" required autocomplete="off">
                     </div>(This is the first part the temporary sub domain. You can add a custom domain on cpanel later)
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -255,6 +255,21 @@
         </div>
       </footer>
    </div>
+   <script>
+     $("#username").keypress(function(e) {
+      	$("#error_sp_msg").remove();
+      	var k = e.keyCode,
+      			$return = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32  || (k >= 48 && k <= 57));
+            if(!$return) {
+            	$("<span/>",{
+              	"id" : "error_sp_msg",
+                "html" 	: " &nbsp; Special characters not allowed"
+              }).insertAfter($(this));
+            	return false;
+            }
+
+      })
+   </script>
    <!--   Core JS Files   -->
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/jquery.min.js" type="text/javascript"></script>
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/popper.min.js" type="text/javascript"></script>
