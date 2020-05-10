@@ -259,6 +259,7 @@
    <script>
      $(document).ready(function(){
       $("#username").keypress(function (e) {
+        $("#error_msg").html("")
         var key = e.keyCode || e.which;       
         $("#error_msg").html("");
         //Regular Expression
