@@ -39,7 +39,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['token']) &
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $pass_token=$row['pass_token'];
-    if($pass_tokenx==$pass_token && $pass_token!=0)
+    if($pass_tokenx==$pass_token)
     {
         if($pass_token!='0')
         {
