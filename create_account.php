@@ -84,8 +84,8 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                     $_SESSION['pro_status']=$plan_id;
                     $name=clean($name);
                     $date_time=date("Y-m-d h:i:s");
-                    $sql="INSERT INTO forum_users (username, email, is_email_confirmed, password, joined_at)
-                    VALUES ('$name', '$email', '1', '$password', '$date_time')";
+                    $sql="INSERT INTO forum_users (username, nickname, email, is_email_confirmed, password, joined_at)
+                VALUES ('$name', '$name', '$email', '1', '$password', '$date_time')";
                     if ($conn->query($sql) === TRUE)
                     {
                     header("Location: dashboard.php");
@@ -136,15 +136,15 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                 $_SESSION['pass']=$passwordx;
                 $name=clean($name);
                 $date_time=date("Y-m-d h:i:s");
-                $sql="INSERT INTO forum_users (username, email, is_email_confirmed, password, joined_at)
-                VALUES ('$name', '$email', '1', '$password', '$date_time')";
+                $sql="INSERT INTO forum_users (username, nickname, email, is_email_confirmed, password, joined_at)
+                VALUES ('$name', '$name', '$email', '1', '$password', '$date_time')";
                 if ($conn->query($sql) === TRUE)
                 {
                 header("Location: dashboard.php");
                 }
                 else
                 {
-                    echo $conn->error;
+                    //echo $conn->error;
                     echo"<br><br><br><br><br><br><br><center>
                     <div class='text-white'>Something Went Wrong
                     <br>Please try again, If this happens again please contact us.
