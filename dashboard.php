@@ -290,12 +290,10 @@
                   <div class="" id="example-navbar-primary">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-                          <i class="tim-icons icon-minimal-down" aria-hidden="true"></i>View More
-                        </a>
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-expanded="false">View More</a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-header"></a>
-                          <a class="dropdown-item" data-toggle="modal" data-target="#myModal4">Profile</a>
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal4">Profile</a>
                           <a class="dropdown-item" href="https://zynact.com/forum/public/">Forum</a>
                           <a class="dropdown-item" href="#">Knowledge Base</a>
                           <div class="divider"></div>
