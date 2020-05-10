@@ -294,10 +294,10 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-header"></a>
                           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal4">Profile</a>
-                          <a class="dropdown-item" href="https://zynact.com/forum/public/">Forum</a>
+                          <a class="dropdown-item" href="https://zynact.com/forum/public/" target="_blank">Forum</a>
                           <a class="dropdown-item" href="#">Knowledge Base</a>
                           <div class="divider"></div>
-                          <a class="dropdown-item" href="https://zynact.com/forum/public/d/2-how-to-get-free-ssl-certificate/2">Free SSL Certificate</a>
+                          <a class="dropdown-item" href="https://zynact.com/forum/public/d/2-how-to-get-free-ssl-certificate/2" target="_blank">Free SSL Certificate</a>
                         </div>
                     </li>
                   </ul>
