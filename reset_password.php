@@ -56,7 +56,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['token']) &
                 SET password='$password' WHERE email='$email'";
                 if ($conn->query($sql) === TRUE)
                 {
-                    echo"<br><br><br><br><br><br><br><center>
+                    echo"<center>
                     <div class='text-white'>Community Forum Password Successfully Changed
                     <br><br>
                     <a class='btn btn-info' href='login.php'>Login</a></div></center>";
