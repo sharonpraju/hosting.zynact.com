@@ -85,7 +85,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                     $name=clean($name);
                     $date_time=date("Y-m-d h:i:s");
                     $sql="INSERT INTO forum_users (username, nickname, email, is_email_confirmed, password, joined_at)
-                VALUES ('$name', '$name', '$email', '1', '$password', '$date_time')";
+                    VALUES ('$name', '$name', '$email', '1', '$password', '$date_time')";
                     if ($conn->query($sql) === TRUE)
                     {
                     header("Location: dashboard.php");
