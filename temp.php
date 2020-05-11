@@ -28,7 +28,7 @@ function clean($string) {
                 echo "####";
                 echo $email;
                 echo "<br>";
-                echo "Skipped"
+                echo "Skipped";
             }
             else
             {
