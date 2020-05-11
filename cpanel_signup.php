@@ -264,6 +264,7 @@
         $("#error_msg").html("");
         //Regular Expression
         var reg_exp = /^[A-Za-z0-9_- ]+$/;
+        //comment
         //Validate Text Field value against the Regex.
         var is_valid = reg_exp.test(String.fromCharCode(key));
         if (!is_valid) {
