@@ -40,25 +40,6 @@
 
     gtag('config', 'UA-165588900-1');
   </script>
-
-<script>
-     $(document).ready(function(){
-      $("#username").keypress(function (e) {
-        $("#error_msg").html("")
-        var key = e.keyCode || e.which;       
-        $("#error_msg").html("");
-        //Regular Expression
-        var reg_exp = /^[A-Za-z0-9_- ]+$/;
-        //comment
-        //Validate Text Field value against the Regex.
-        var is_valid = reg_exp.test(String.fromCharCode(key));
-        if (!is_valid) {
-          $("#error_msg").html("No special characters allowed!");
-        }
-        return is_valid;
-      });
-    });
-   </script>
  </head>
  
  <body class="register-page">
@@ -275,6 +256,22 @@
         </div>
       </footer>
    </div>
+   <script>
+     $(document).ready(function(){
+      $("#username").keypress(function (e) {
+        var key = e.keyCode || e.which;       
+        $("#error_msg").html("");
+        //Regular Expression
+        var reg_exp = /^[A-Za-z0-9_ ]+$/;
+        //Validate Text Field value against the Regex.
+        var is_valid = reg_exp.test(String.fromCharCode(key));
+        if (!is_valid) {
+          $("#error_msg").html("No special characters allowed!");
+        }
+        return is_valid;
+      });
+    });
+   </script>
    <!--   Core JS Files   -->
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/jquery.min.js" type="text/javascript"></script>
    <script src="https://sharonpraju.github.io/Zynact/assests/js/core/popper.min.js" type="text/javascript"></script>
