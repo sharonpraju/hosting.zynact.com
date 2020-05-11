@@ -45,6 +45,7 @@ function clean($string) {
     return preg_replace('/-+/', '', $string); // Removes multiple hyphens.
 }
 
+$x=1;
 $user_ip = getUserIP();
 
 if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['password']) && !empty($_POST['password']) && isset($_SESSION['plan_selected']) && !empty($_SESSION['plan_selected']))
@@ -84,6 +85,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                     $_SESSION['pro_status']=$plan_id;
                     $name=clean($name);
                     $date_time=date("Y-m-d h:i:s");
+                    insert:
                     $sql="INSERT INTO forum_users (username, nickname, email, is_email_confirmed, password, joined_at)
                     VALUES ('$name', '$name', '$email', '1', '$password', '$date_time')";
                     if ($conn->query($sql) === TRUE)
@@ -92,13 +94,37 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                     }
                     else
                     {
-                        //echo $conn->error;
-                        echo"<br><br><br><br><br><br><br><center>
-                        <div class='text-white'>Something Went Wrong
-                        <br>Please try again, If this happens again please contact us.
-                        <br> Error-Code : acc_reg_forum_01";
-                        echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
-                        <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                        $sql = "SELECT username FROM forum_users WHERE username='$name'"; 
+                        $result = mysqli_query($conn, $sql);
+                        $row = mysqli_num_rows($result);
+                        if($row >= 1)
+                        {
+                            if($x<100)
+                            {
+                                $name=$name.$x;
+                                $x++;
+                                goto insert;
+                            }
+                            else
+                            {
+                                echo"<br><br><br><br><br><br><br><center>
+                                <div class='text-white'>User with same name already exist please use another name 
+                                <br>Please try again, If this happens again please contact us.
+                                <br> Error-Code : acc_reg_forum_01";
+                                echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
+                                <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                            }
+                        }
+                        else
+                        {
+                            //echo $conn->error;
+                            echo"<br><br><br><br><br><br><br><center>
+                            <div class='text-white'>Something Went Wrong
+                            <br>Please try again, If this happens again please contact us.
+                            <br> Error-Code : acc_reg_forum_02";
+                            echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
+                            <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                        }
                     }
                 }
                 else
@@ -136,6 +162,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                 $_SESSION['pass']=$passwordx;
                 $name=clean($name);
                 $date_time=date("Y-m-d h:i:s");
+                insert_1:
                 $sql="INSERT INTO forum_users (username, nickname, email, is_email_confirmed, password, joined_at)
                 VALUES ('$name', '$name', '$email', '1', '$password', '$date_time')";
                 if ($conn->query($sql) === TRUE)
@@ -144,13 +171,37 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['name']) &&
                 }
                 else
                 {
-                    //echo $conn->error;
-                    echo"<br><br><br><br><br><br><br><center>
-                    <div class='text-white'>Something Went Wrong
-                    <br>Please try again, If this happens again please contact us.
-                    <br> Error-Code : acc_reg_forum_02";
-                    echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
-                    <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                    $sql = "SELECT username FROM forum_users WHERE username='$name'"; 
+                    $result = mysqli_query($conn, $sql);
+                    $row = mysqli_num_rows($result);
+                    if($row >= 1)
+                    {
+                        if($x<100)
+                        {
+                            $name=$name.$x;
+                            $x++;
+                            goto insert_1;
+                        }
+                        else
+                        {
+                            echo"<br><br><br><br><br><br><br><center>
+                            <div class='text-white'>User with same name already exist please use another name 
+                            <br>Please try again, If this happens again please contact us.
+                            <br> Error-Code : acc_reg_forum_03";
+                            echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
+                            <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                        }
+                    }
+                    else
+                    {
+                        //echo $conn->error;
+                        echo"<br><br><br><br><br><br><br><center>
+                        <div class='text-white'>Something Went Wrong
+                        <br>Please try again, If this happens again please contact us.
+                        <br> Error-Code : acc_reg_forum_04";
+                        echo"<br><a class='btn btn-info' href='https://zynact.com/contact.html'>Contact Us</a>
+                        <a class='btn btn-info' href='select_plan.php'>Back</a></div></center>";
+                    }
                 }
             }
             else
