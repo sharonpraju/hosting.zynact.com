@@ -415,10 +415,7 @@
 		<span>You need to create cpanel account to host your website, click the above button to create a new cpanel account.<br></span>
         <span>If your recently created cpanel account is not listed above please check your email for activation mail.</span>
         </div>
-     <br><br>
-     <center>
-     <script async="async" data-cfasync="false" src="//native.propellerclick.com/1?z=3293097"></script>
-     </center><br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer class="footer"  style="margin-bottom: -70px;">
         <div class="container">
           <div class="row">
