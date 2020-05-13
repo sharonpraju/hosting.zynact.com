@@ -237,6 +237,9 @@
        </div>
      </div>
      <?php include 'ad.html'; ?>
+     <br><br>
+     <?php include 'ad.html'; ?>
+     <br><br>
      <footer class="footer"  style="margin-bottom: -70px;">
         <div class="container">
           <div class="row">

@@ -106,9 +106,43 @@
     </div>
   </nav>
    <!-- End Navbar -->
+   <br><br><br><br>
+   <style>
+    @media (max-width:480px)  {
+      .ad_container_wide{
+        display: none;
+      }
+      .ad_container_short{
+        display: block;
+      }
+    }
+    
+    @media (min-width:480px)  {
+      .ad_container_wide{
+        display: block;
+      }
+      .ad_container_short{
+        display: none;
+      }
+    }
+    
+    </style>
+    <div class="ad_container_wide">
+        <center><script type="text/javascript">
+            atOptions = {
+                'key' : '4f2fd96ddeae8382fea17ca27cf5290e',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.hiprofitnetworks.com/4f2fd96ddeae8382fea17ca27cf5290e/invoke.js"></scr' + 'ipt>');
+        </script></center>
+    </div>
+    <br><br><br>
    <section class="section section-lg">
     <div class="container">
-        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
             <h1 class="text-white" style="margin-top: -65px;">Frequently Asked Questions
             </h1><br><br><br><br>
                     <span class="text-white">How much files can I upload?<br></span>
