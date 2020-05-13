@@ -114,7 +114,7 @@
         <div class="col-lg-12">
           <div class="row row-grid justify-content-center">
             <div class="col-lg-3">
-              <div class="info"><h1 class="text-white" style="margin-top: -200px;">Support
+              <div class="info"><h1 class="text-white" style="margin-top: -65px;">Support
                 </h1>
                 <br>
                 <div class="icon icon-primary">
