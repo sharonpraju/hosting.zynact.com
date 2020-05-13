@@ -106,8 +106,9 @@
     </div>
   </nav>
    <!-- End Navbar -->
-   <br><br><br><br>
+   <br><br><br><br><br><br>
    <?php include 'ad.html'; ?>
+   <br><br>
    <section class="section section-lg" style="margin-top: -150px;">
     <div class="container">
       <div class="row justify-content-center">
