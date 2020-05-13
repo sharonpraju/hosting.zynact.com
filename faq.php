@@ -139,12 +139,11 @@
             document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.hiprofitnetworks.com/4f2fd96ddeae8382fea17ca27cf5290e/invoke.js"></scr' + 'ipt>');
         </script></center>
     </div>
-    <br><br><br>
+    <br><br>
    <section class="section section-lg">
     <div class="container">
-        <br><br><br><br><br><br>
             <h1 class="text-white" style="margin-top: -65px;">Frequently Asked Questions
-            </h1><br><br><br><br>
+            </h1><br>
                     <span class="text-white">How much files can I upload?<br></span>
                     You're free to upload as much files as you want, but please be aware that the largest size for an individual file is limited to 10Mb.
 
