@@ -106,6 +106,8 @@
     </div>
   </nav>
    <!-- End Navbar -->
+   <br><br>
+   <?php include 'ad.html'; ?>
    <section class="section section-lg">
     <div class="container">
     <br><br>
