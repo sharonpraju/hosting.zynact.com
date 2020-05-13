@@ -415,7 +415,9 @@
 		<span>You need to create cpanel account to host your website, click the above button to create a new cpanel account.<br></span>
         <span>If your recently created cpanel account is not listed above please check your email for activation mail.</span>
         </div>
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br>
+     <?php include 'ad.html'; ?>
+     <br><br><br><br><br><br><br><br><br><br>
     <footer class="footer"  style="margin-bottom: -70px;">
         <div class="container">
           <div class="row">
