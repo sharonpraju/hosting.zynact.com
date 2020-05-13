@@ -106,16 +106,15 @@
     </div>
   </nav>
    <!-- End Navbar -->
-   <br><br>
+   <br><br><br><br>
    <?php include 'ad.html'; ?>
-   <section class="section section-lg">
+   <section class="section section-lg" style="margin-top: -150px;">
     <div class="container">
-    <br><br>
       <div class="row justify-content-center">
         <div class="col-lg-12">
           <div class="row row-grid justify-content-center">
             <div class="col-lg-3">
-              <div class="info"><h1 class="text-white" style="margin-top: -65px;">Support
+              <div class="info"><h1 class="text-white" style="margin-top: -200px;">Support
                 </h1>
                 <br>
                 <div class="icon icon-primary">
