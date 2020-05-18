@@ -350,20 +350,20 @@
                                     if($status==0)
                                     {
                                       if($status==0){$status="Not Activated";}
-                                      if($status==1){$status="Active";}
+                                      /*if($status==1){$status="Active";}
                                       if($status==2){$status="Suspended";}
-                                      if($status==3){$status="Terminated";}
+                                      if($status==3){$status="Terminated";}*/
                                       echo'<tr>
                                       <td>
                                         '.$url.'<br><small>Account '.$status.'</small>
                                       </td>
                                       <td>
                                       <input type="text" id="url'.$username.'" value="'.$urlx.'" hidden readonly>
-                                      <input type="text" id="url'.$link.'" value="'.$urlx.'" hidden readonly>
-                                      <a class="btn btn-warning" data-toggle="modal" data-target="#myModal3" id="'.$link.'" onclick="change_link(this.id)">Control Panel</a>
+                                      <input type="text" id="" value="'.$urlx.'" hidden readonly>
+                                      <a class="btn btn-warning" data-toggle="modal" data-target="#myModal3" id="" onclick="">Control Panel</a>
                                       </td>
                                       <td>
-                                       <a class="btn btn-simple btn-breez btn_2 " data-toggle="modal" data-target="#myModal3" id="'.$username.'"  onclick="change_user(this.id)">Details</a>
+                                       <a class="btn btn-simple btn-breez btn_2 " data-toggle="modal" data-target="#myModal3" id="'.$username.'"  onclick="">Details</a>
                                       </td>
                                       </tr>';
                                     }
