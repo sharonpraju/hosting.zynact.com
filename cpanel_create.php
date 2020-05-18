@@ -26,6 +26,19 @@ if(isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['webs
     $usernamex="http://".$username.".zynact.top";
     $email=$_POST['zynact_1x'];
 
+    $sql = "SELECT email FROM user_config WHERE email='$email'"; 
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_num_rows($result);
+    if($row >= 1)
+    {
+      //do nothing
+    }
+    else
+    {
+      header("Location: https://hosting.zynact.com/login.php");
+      exit;
+    }
+
     $sql = "SELECT url, email, status FROM cpanel_accounts WHERE url='$usernamex'"; 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_num_rows($result);
