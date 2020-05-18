@@ -413,7 +413,7 @@
         <div class="btn_1">
         <span>You can create maximum 3 cpanel accounts.<br></span>
 		<span>You need to create cpanel account to host your website, click the above button to create a new cpanel account.<br></span>
-        <span>If your recently created cpanel account is not listed above please check your email for activation mail.</span>
+        <span>If your recently created cpanel account is not listed above, please check your email for activation mail.</span>
         </div>
      <br><br><br><br><br><br>
      <?php include 'ad.html'; ?>
